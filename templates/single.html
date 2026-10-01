@@ -1,0 +1,98 @@
+<!-- wp:group {"className":"deneb-site-layout","layout":{"type":"default"}} -->
+<div class="wp-block-group deneb-site-layout">
+    
+    <!-- wp:template-part {"slug":"header"} /-->
+
+    <!-- wp:group {"tagName":"main","className":"deneb-main-block deneb-page-block","style":{"spacing":{"margin":{"top":"var:preset|spacing|x-small","bottom":"var:preset|spacing|x-small"}}},"layout":{"type":"constrained"}} -->
+    <main class="wp-block-group deneb-main-block deneb-page-block" style="margin-top:var(--wp--preset--spacing--x-small);margin-bottom:var(--wp--preset--spacing--x-small)">
+        <!-- wp:group {"layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
+        <div class="wp-block-group">
+            <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|regular"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
+            <div class="wp-block-group">
+                <!-- wp:pattern {"slug":"juliepr-theme-deneb/breadcrumbs"} /-->
+
+                <!-- wp:post-title {"level":1,"style":{"typography":{"textAlign":"center"}}} /-->
+
+                <!-- wp:pattern {"slug":"juliepr-theme-deneb/series-toc"} /-->
+
+                <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|x-small"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+                <div class="wp-block-group">
+                    <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+                    <div class="wp-block-group">
+                        <!-- wp:pattern {"slug":"juliepr-theme-deneb/post-date"} /-->
+                        <!-- wp:pattern {"slug":"juliepr-theme-deneb/post-categories"} /-->
+                    </div>
+                    <!-- /wp:group -->
+
+                    <!-- wp:post-content /-->
+                    
+                    <!-- wp:pattern {"slug":"juliepr-theme-deneb/post-tags"} /-->
+                </div>
+                <!-- /wp:group -->
+            </div>
+            <!-- /wp:group -->
+
+            <!-- wp:group {"style":{"border":{"top":{"width":"1px"},"bottom":{"width":"1px"}},"spacing":{"padding":{"top":"var:preset|spacing|x-small","bottom":"var:preset|spacing|x-small"}}},"fontSize":"small","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+            <div class="wp-block-group has-small-font-size"
+                style="border-top-width:1px;border-bottom-width:1px;padding-top:var(--wp--preset--spacing--x-small);padding-bottom:var(--wp--preset--spacing--x-small)">
+                <!-- wp:post-navigation-link {"type":"previous","showTitle":true,"arrow":"arrow"} /-->
+                <!-- wp:post-navigation-link {"showTitle":true,"arrow":"arrow"} /-->
+            </div>
+            <!-- /wp:group -->
+
+            <!-- wp:pattern {"slug":"juliepr-theme-deneb/subscription-reminder"} /-->
+
+            <!-- wp:group {"style":{"border":{"top":{"width":"1px"},"bottom":{"width":"1px"}}},"layout":{"type":"constrained"}} -->
+            <div class="wp-block-group" style="border-top-width:1px;border-bottom-width:1px">
+                <!-- wp:comments -->
+                <div class="wp-block-comments">
+                    <!-- wp:comments-title /-->
+
+                    <!-- wp:comment-template {"style":{"typography":{"lineHeight":"1.4"}}} -->
+                        <!-- wp:columns {"style":{"spacing":{"padding":{"top":"var:preset|spacing|small","bottom":"var:preset|spacing|small","left":"var:preset|spacing|small","right":"var:preset|spacing|small"},"blockGap":{"top":"0"},"margin":{"top":"var:preset|spacing|x-small","bottom":"var:preset|spacing|x-small"}},"border":{"width":"1px"}}} -->
+                        <div class="wp-block-columns"
+                            style="border-width:1px;margin-top:var(--wp--preset--spacing--x-small);margin-bottom:var(--wp--preset--spacing--x-small);padding-top:var(--wp--preset--spacing--small);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--small);padding-left:var(--wp--preset--spacing--small)">
+                            <!-- wp:column {"width":"40px"} -->
+                            <div class="wp-block-column" style="flex-basis:40px">
+                                <!-- wp:avatar {"size":40,"style":{"border":{"radius":"20px"}}} /-->
+                            </div>
+                            <!-- /wp:column -->
+
+                            <!-- wp:column -->
+                            <div class="wp-block-column">
+                                <!-- wp:comment-author-name {"style":{"typography":{"fontStyle":"normal","fontWeight":"500"}}} /-->
+
+                                <!-- wp:group {"style":{"spacing":{"margin":{"top":"0px","bottom":"0px"}}},"layout":{"type":"flex"}} -->
+                                <div class="wp-block-group" style="margin-top:0px;margin-bottom:0px">
+                                    <!-- wp:comment-date {"format":"d.m.Y H:i","fontSize":"small"} /-->
+                                    <!-- wp:comment-edit-link {"fontSize":"small"} /-->
+                                </div>
+                                <!-- /wp:group -->
+
+                                <!-- wp:comment-content /-->
+
+                                <!-- wp:comment-reply-link {"fontSize":"small"} /-->
+                            </div>
+                            <!-- /wp:column -->
+                        </div>
+                        <!-- /wp:columns -->
+                    <!-- /wp:comment-template -->
+
+                    <!-- wp:comments-pagination {"layout":{"type":"flex","justifyContent":"center"}} /-->
+
+                    <!-- wp:post-comments-form /-->
+                </div>
+                <!-- /wp:comments -->
+            </div>
+            <!-- /wp:group -->
+
+            <!-- wp:pattern {"slug":"juliepr-theme-deneb/similar-posts"} /-->
+        </div>
+        <!-- /wp:group -->
+    </main>
+    <!-- /wp:group -->
+
+    <!-- wp:template-part {"slug":"footer"} /-->
+    
+</div>
+<!-- /wp:group -->

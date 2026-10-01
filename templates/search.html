@@ -1,0 +1,23 @@
+<!-- wp:group {"className":"deneb-site-layout","layout":{"type":"default"}} -->
+<div class="wp-block-group deneb-site-layout">
+
+	<!-- wp:template-part {"slug":"header"} /-->
+
+	<!-- wp:group {"tagName":"main","className":"deneb-main-block deneb-page-block","style":{"spacing":{"margin":{"top":"var:preset|spacing|x-small","bottom":"var:preset|spacing|x-small"}}},"layout":{"type":"constrained"}} -->
+	<main class="wp-block-group deneb-main-block deneb-page-block" style="margin-top:var(--wp--preset--spacing--x-small);margin-bottom:var(--wp--preset--spacing--x-small)">
+		<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|regular"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
+		<div class="wp-block-group">
+			<!-- wp:pattern {"slug":"juliepr-theme-deneb/breadcrumbs"} /-->
+
+			<!-- wp:query-title {"type":"search","style":{"typography":{"textAlign":"center"}}} /-->
+
+			<!-- wp:template-part {"slug":"grid","theme":"juliepr-theme-deneb"} /-->
+		</div>
+		<!-- /wp:group -->
+	</main>
+	<!-- /wp:group -->
+
+	<!-- wp:template-part {"slug":"footer"} /-->
+
+</div>
+<!-- /wp:group -->

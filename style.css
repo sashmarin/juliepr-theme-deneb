@@ -1,0 +1,309 @@
+/*
+Theme Name: Juliepr Blog Theme (Deneb)
+Theme URI: https://github.com/sashmarin/juliepr-theme-deneb
+Author: Sergei Ashmarin
+Description: A modern block theme for Julia Laputina's blog.
+Requires at least: 7.0
+Requires PHP: 8.3
+Version: 1.1.0
+Text Domain: juliepr-theme-deneb
+Domain Path: /languages
+*/
+
+/*
+ * Do not inflate text size on mobile devices in landscape mode
+ */
+html {
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+
+/*
+ * Improve text rendering on macOS browsers
+ */
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+ * Paddding on screen edges
+ */
+div.deneb-page-block, main.deneb-page-block {
+	padding-left: var(--wp--preset--spacing--small);
+	padding-right: var(--wp--preset--spacing--small);
+}
+div.deneb-main-block {
+	margin-top: var(--wp--preset--spacing--x-small);
+	margin-bottom: var(--wp--preset--spacing--x-small);
+}
+
+/*
+ * Push Footer to the bottom of page
+ */
+.deneb-site-layout {
+	min-block-size: 100dvh;
+	display: flex;
+	flex-direction: column;
+}
+.deneb-site-layout > main {
+	flex: 1;
+}
+
+/*
+ * Improve line wrapping
+ */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+ * Content Paragraph styles
+ */
+ div.wp-block-post-content p.wp-block-paragraph {
+	line-height: 1.875;
+ }
+
+/*
+ * Manual Text Justification
+ */
+.deneb-justified-text {
+	text-align: justify;
+}
+
+/*
+ * For better resizing images in classic posts
+ */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*
+ * Link styles
+ * https://github.com/WordPress/gutenberg/issues/42319
+ */
+a {
+	text-decoration-thickness: 1px !important;
+	text-underline-offset: .1em;
+}
+a:hover {
+	text-underline-offset: .25em;
+}
+
+/* Contact address is intentionally displayed as separate parts. */
+.deneb-contact-email {
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+/*
+ * Links without underline
+ */
+.wp-block-post-title a {
+	text-decoration: none;
+}
+.wp-block-post-title:hover a {
+	text-decoration: underline;
+	text-underline-offset: .1em;
+}
+
+/*
+ * Change the position of the more block on the front, by making it a block level element.
+ * https://github.com/WordPress/gutenberg/issues/65934
+*/
+.more-link {
+	display: block;
+}
+
+/*
+ * Link-Buttons styling
+ */
+a.deneb-button-link {
+	padding: 0.6em 0.8em;
+	border: 1px solid var(--wp--preset--color--black);
+	color: var(--wp--preset--color--black);
+	text-decoration: none;
+	font-family: Fira Code, monospace;
+}
+a.deneb-button-link:hover {
+	background-color: var(--wp--preset--color--dark-grey);
+	color: var(--wp--preset--color--white) !important;
+}
+
+/*
+ * Search box styling
+ */
+.wp-block-search__input {
+	padding: 0.25em 0.5em;
+}
+.wp-block-search__button {
+	padding: 0.25em 0.5em;
+}
+
+/* 
+ * Similar posts styling
+ */
+h3.juliepr-similar-posts__title a {
+	color: var(--wp--preset--color--black);
+	text-decoration: none;
+}
+h3.juliepr-similar-posts__title a:hover {
+	text-decoration: underline;
+}
+
+/*
+ * Light up post featured images on mouse hover
+ */
+.wp-block-post-featured-image, .juliepr-similar-posts__image-link {
+	position: relative;
+	overflow: hidden;
+}
+.wp-block-post-featured-image::after, .juliepr-similar-posts__image-link::after {
+	position: absolute;
+	inset: 0;
+	background: rgb(255 255 255 / 25%);
+	content: "";
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.2s ease;
+}
+.wp-block-post-featured-image:hover::after, .wp-block-post-featured-image:focus-within::after,
+.juliepr-similar-posts__image-link:focus-within::after, .juliepr-similar-posts__image-link:hover::after {
+	opacity: 1;
+}
+
+/*
+ * Query loop images "ladder"
+ */
+.wp-block-post-template > li:nth-child(even) .deneb-ladder-query {
+    flex-direction: row-reverse;
+}
+
+/*
+ * Footer
+ */
+div.deneb-footer {
+	background-color: var(--wp--preset--color--almost-white) !important;
+	color: var(--wp--preset--color--almost-black) !important;
+}
+.wp-block-social-links.is-style-logos-only .wp-social-link,
+.wp-block-social-links.is-style-logos-only .wp-social-link-anchor,
+.wp-block-social-links.is-style-logos-only .wp-social-link-anchor svg {
+	color: var(--wp--preset--color--almost-black) !important;
+	fill: var(--wp--preset--color--almost-black) !important;
+}
+
+/*
+ * Technical Page Images
+ */
+.deneb-index-image-placeholder {
+	background-image: url("./assets/images/index.webp");
+	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: contain;
+}
+.deneb-404-image-placeholder {
+	background-image: url("./assets/images/404.webp");
+	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: contain;
+}
+.deneb-empty-image-placeholder {
+	background-image: url("./assets/images/empty.webp");
+	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: contain;
+}
+
+/*
+ * Dark Mode toggle button
+ */
+.deneb-palette-toggle button{
+	font-family: var(--wp--preset--font-family--text);
+}
+.deneb-palette-toggle button:hover {
+	font-weight: 900;
+}
+
+/*
+ * Dark Mode styles
+ */
+:root[data-palette="dark"] body {
+	background-color: var(--wp--preset--color--black);
+	color: var(--wp--preset--color--white);
+}
+:root[data-palette="dark"] :is(h1, h2, h3, h4, h5) {
+	color: var(--wp--preset--color--white);
+}
+:root[data-palette="dark"] a {
+	color: var(--wp--preset--color--white);
+}
+:root[data-palette="dark"] div.wp-block-group {
+	border-color: var(--wp--preset--color--dark-grey);
+}
+:root[data-palette="dark"] .wp-block-navigation__submenu-container {
+	background-color: var(--wp--preset--color--black);
+	color: var(--wp--preset--color--white);
+	border-color: var(--wp--preset--color--dark-grey);
+	border-width: 1px;
+	border-style: solid;
+}
+:root[data-palette="dark"] .wp-block-button a {
+	background-color: var(--wp--preset--color--white) !important;
+	border-color: var(--wp--preset--color--white);
+	color: var(--wp--preset--color--black) !important;
+}
+:root[data-palette="dark"] .wp-block-button a:hover {
+	background-color: var(--wp--preset--color--light-grey) !important;
+}
+:root[data-palette="dark"] .deneb-palette-toggle button {
+	background-color: var(--wp--preset--color--black) !important;
+	color: var(--wp--preset--color--white) !important;
+}
+:root[data-palette="dark"] .deneb-palette-toggle button:hover {
+	background-color: var(--wp--preset--color--black) !important;
+	color: var(--wp--preset--color--white) !important;
+}
+:root[data-palette="dark"] a.deneb-button-link {
+	border-color: var(--wp--preset--color--white);
+	color: var(--wp--preset--color--white);
+}
+:root[data-palette="dark"] a.deneb-button-link:hover {
+	background-color: var(--wp--preset--color--light-grey);
+	color: var(--wp--preset--color--black) !important;
+}
+:root[data-palette="dark"] .wp-block-post-title a {
+	color: var(--wp--preset--color--white);
+}
+:root[data-palette="dark"] div.deneb-footer {
+	background-color: var(--wp--preset--color--almost-black) !important;
+	color: var(--wp--preset--color--almost-white) !important;
+}
+:root[data-palette="dark"] .wp-block-social-links.is-style-logos-only .wp-social-link,
+:root[data-palette="dark"] .wp-block-social-links.is-style-logos-only .wp-social-link-anchor,
+:root[data-palette="dark"] .wp-block-social-links.is-style-logos-only .wp-social-link-anchor svg {
+	color: var(--wp--preset--color--almost-white) !important;
+	fill: var(--wp--preset--color--almost-white) !important;
+}
+:root[data-palette="dark"] .deneb-index-image-placeholder {
+	background-image: url("./assets/images/index-dark.webp");
+}
+:root[data-palette="dark"] .deneb-empty-image-placeholder {
+	background-image: url("./assets/images/empty-dark.webp");
+}
+:root[data-palette="dark"] .deneb-404-image-placeholder {
+	background-image: url("./assets/images/404-dark.webp");
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.wp-block-post-featured-image::after,
+	.juliepr-similar-posts__image-link::after {
+		transition: none;
+	}
+}

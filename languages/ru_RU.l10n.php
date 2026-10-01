@@ -1,0 +1,51 @@
+<?php
+/**
+ * Russian translations in the WordPress PHP translation format.
+ *
+ * This format is supported by WordPress 6.5 and later and replaces legacy
+ * binary MO files for this theme. The filename follows the block-theme
+ * convention: languages/<locale>.l10n.php.
+ *
+ * @package Juliepr
+ * @subpackage Theme_Deneb
+ */
+
+return array(
+	'project-id-version' => 'Juliepr Blog Theme (Deneb) 1.0.0',
+	'language'           => 'ru_RU',
+	'plural-forms'       => 'nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);',
+	'messages'           => array(
+		'Copyright info' . "\4" . '© 2008 – %Y Julia Laputina. Copying and distributing site materials without the author\'s consent is prohibited. This site uses cookies to store preferences and integrate with search engines.' => '© 2008 – %Y Юлия Лапутина. Копирование и распространение материалов сайта без согласия автора запрещено. Сайт использует cookies для хранения настроек и для интеграции с поисковыми системами.',
+		'Theme Settings' => 'Настройки темы',
+		'Home page breadcrumb' => 'Breadcrumb главной страницы',
+		'Leave blank to show the post count.' => 'Если оставить поле пустым, будет показан счётчик публикаций.',
+		'Main menu pages' => 'Страницы главного меню',
+		'Enter one page slug per line. Pages appear in this order after the category list.' => 'Укажите slug каждой страницы с новой строки. Страницы будут выведены в указанном порядке после списка категорий.',
+		'Earliest year for similar posts' => 'Минимальный год похожих публикаций',
+		'Posts created before this year are excluded from the Similar Posts block.' => 'Публикации, созданные раньше этого года, не будут учитываться в блоке «Похожие публикации».',
+		'Plugin required' => 'Требуется плагин',
+		'Newsletter subscription' => 'Новостная подписка',
+		'Show the newsletter subscription form' => 'Показывать форму новостной подписки',
+		'Copyright text' => 'Текст копирайта',
+		'Use %Y for the current year.' => 'Используйте %Y для подстановки текущего года.',
+		'Social media links' => 'Ссылки на социальные сети',
+		'Enter one link per line in the “service URL” format. For example: instagram https://www.instagram.com/julie_pr_life/' => 'Указывайте по одной ссылке на строку в формате «сеть ссылка». Например: instagram https://www.instagram.com/julie_pr_life/',
+		'See the WordPress Social Icons block documentation for supported service names.' => 'Допустимые названия сетей смотрите в документации к блоку WordPress Social Icons.',
+		'Contact email' => 'Email для связи',
+		'The address appears in the footer in separate parts, without a direct link.' => 'Адрес выводится в футере в разделённом виде, без прямой ссылки.',
+		'Color scheme toggle button label' . "\4" . 'Toggle color scheme' => 'Переключить цветовую схему',
+		'Posts: %d' => 'Статей: %d',
+		'404 Page not found' . "\4" . 'Page not found' => 'Страница не найдена',
+		'Error 404' . "\4" . 'Error 404' => 'Ошибка 404',
+		'404 page description' . "\4" . 'This page does not exist or has been moved. Check the address or use the site search.' => 'Такой страницы не существует, либо она была перемещена. Проверьте правильность введённого адреса или воспользуйтесь поиском по сайту.',
+		'Index page placeholder description' . "\4" . 'This is a technical placeholder page. You should not have arrived here. Something on the site may be configured incorrectly; please notify the site administrator.' => 'Это техническая страница-заглушка, вы не должны были сюда попасть. Вероятно, что-то на сайте настроено неправильно. Сообщите об этом администрации.',
+		'Month Archives title' . "\4" . 'Monthly archives:' => 'Архивы по месяцам:',
+		'No Results' . "\4" . 'No results' => 'Пусто',
+		'No posts matching your search criteria' . "\4" . 'No results match your search.' => 'По вашему запросу ничего не найдено.',
+		'Search Field placeholder' . "\4" . 'Search this site' => 'Поиск по сайту',
+		'Tag Cloud Title' . "\4" . 'Tags to search by' => 'Метки для поиска',
+		'Newsletter subscription heading' . "\4" . 'Do not miss new posts!' => 'Не пропустите выход новых статей!',
+		'Newsletter subscription description' . "\4" . "Subscribe to receive updates about new blog posts.\n                Notifications about new posts will be sent to your email address.\n                We do not use reader email addresses for advertising or share them with third parties." => "Подпишитесь на рассылку о новых статьях в блоге.\n                Уведомления о новых статьях будут приходить на вашу электронную почту.\n                Мы не используем почтовые адреса читателей для рассылки рекламы и не передаём их третьим лицам.",
+		'Newsletter subscription link' . "\4" . 'Subscribe' => 'Подписаться',
+	),
+);

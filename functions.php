@@ -83,6 +83,52 @@ function juliepr_theme_deneb_extend_tag_cloud_limit( $metadata ) {
 add_filter( 'block_type_metadata', 'juliepr_theme_deneb_extend_tag_cloud_limit' );
 
 /**
+ * Makes the core comments count link to the comments section of its post.
+ *
+ * @param string               $block_content Rendered block HTML.
+ * @param array<string, mixed> $parsed_block  Block data.
+ * @param WP_Block             $block         Block instance.
+ * @return string
+ */
+function juliepr_theme_deneb_link_post_comments_count( $block_content, $parsed_block, $block ) {
+	if ( empty( $block->context['postId'] ) ) {
+		return $block_content;
+	}
+
+	$post_id       = (int) $block->context['postId'];
+	$comments_count = get_comments_number( $post_id );
+	$comments_url   = get_permalink( $post_id );
+
+	if ( ! $comments_url ) {
+		return $block_content;
+	}
+
+	$aria_label = sprintf(
+		/* translators: 1: Comment count, 2: Post title. */
+		_n( '%1$s comment on %2$s', '%1$s comments on %2$s', $comments_count, 'juliepr-theme-deneb' ),
+		number_format_i18n( $comments_count ),
+		wp_strip_all_tags( get_the_title( $post_id ) )
+	);
+
+	$link = sprintf(
+		'<a href="%1$s" aria-label="%2$s">%3$s</a>',
+		esc_url( $comments_url . '#comments' ),
+		esc_attr( $aria_label ),
+		esc_html( number_format_i18n( $comments_count ) )
+	);
+
+	$linked_content = preg_replace(
+		'/^(<div\\b[^>]*>)[^<]*(<\\/div>)$/',
+		'$1' . $link . '$2',
+		$block_content,
+		1
+	);
+
+	return null === $linked_content ? $block_content : $linked_content;
+}
+add_filter( 'render_block_core/post-comments-count', 'juliepr_theme_deneb_link_post_comments_count', 10, 3 );
+
+/**
  * Returns the theme settings with their defaults applied.
  *
  * @return array{min_year: int, show_newsletter: bool, archive_canonical: bool, copyright_text: string, home_breadcrumb: string, main_menu_page_slugs: string, social_links: string, contact_email: string} Theme settings.

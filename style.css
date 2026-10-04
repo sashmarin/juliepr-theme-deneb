@@ -41,7 +41,7 @@ div.deneb-main-block {
  * Push Footer to the bottom of page
  */
 .deneb-site-layout {
-	min-block-size: 100dvh;
+	min-block-size: calc(100dvh - var(--wp-admin--admin-bar--height, 0px));
 	display: flex;
 	flex-direction: column;
 }
@@ -82,6 +82,9 @@ h1, h2, h3, h4, h5, h6 {
 img {
     max-width: 100%;
     height: auto;
+}
+figure {
+    max-width: 100%;
 }
 
 /*

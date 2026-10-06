@@ -5,7 +5,7 @@ Author: Sergei Ashmarin
 Description: A modern block theme for Julia Laputina's blog.
 Requires at least: 7.0
 Requires PHP: 8.3
-Version: 1.3.1
+Version: 1.3.2
 Text Domain: juliepr-theme-deneb
 Domain Path: /languages
 */
@@ -55,11 +55,11 @@ div.deneb-main-block {
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
-p {
-  text-wrap: pretty;
-}
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
+}
+.wp-block-post-content a {
+    overflow-wrap: anywhere;
 }
 
 /*

@@ -44,10 +44,10 @@ function juliepr_theme_deneb_enqueue_scripts() {
 		'juliepr-theme-deneb-color-palette',
 		'julieprThemeDenebSettings',
 		array(
-			'paletteToggleLabel' => _x(
-				'Toggle color scheme',
-				'Color scheme toggle button label',
-				'juliepr-theme-deneb'
+			'paletteToggleLabels' => array(
+				'system' => __( 'Color scheme: System. Switch to dark mode.', 'juliepr-theme-deneb' ),
+				'dark'   => __( 'Color scheme: Dark. Switch to light mode.', 'juliepr-theme-deneb' ),
+				'light'  => __( 'Color scheme: Light. Follow system settings.', 'juliepr-theme-deneb' ),
 			),
 		)
 	);

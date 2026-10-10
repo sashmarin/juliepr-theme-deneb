@@ -11,7 +11,7 @@
  */
 
 return array(
-	'project-id-version' => 'Juliepr Blog Theme (Deneb) 1.3.3',
+	'project-id-version' => 'Juliepr Blog Theme (Deneb) 1.4.2',
 	'language'           => 'ru_RU',
 	'plural-forms'       => 'nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);',
 	'messages'           => array(
@@ -36,7 +36,9 @@ return array(
 		'See the WordPress Social Icons block documentation for supported service names.' => 'Допустимые названия сетей смотрите в документации к блоку WordPress Social Icons.',
 		'Contact email' => 'Email для связи',
 		'The address appears in the footer in separate parts, without a direct link.' => 'Адрес выводится в футере в разделённом виде, без прямой ссылки.',
-		'Color scheme toggle button label' . "\4" . 'Toggle color scheme' => 'Переключить цветовую схему',
+		'Color scheme: System. Switch to light mode.' => 'Цветовая схема: как в системе. Включить светлую тему.',
+		'Color scheme: Light. Switch to dark mode.' => 'Цветовая схема: светлая. Включить тёмную тему.',
+		'Color scheme: Dark. Follow system settings.' => 'Цветовая схема: тёмная. Использовать тему как в системе.',
 		'Posts: %d' => 'Статей: %d',
 		'404 Page not found' . "\4" . 'Page not found' => 'Страница не найдена',
 		'Error 404' . "\4" . 'Error 404' => 'Ошибка 404',

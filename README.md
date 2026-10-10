@@ -3,6 +3,13 @@
 A modern WordPress block theme for a personal blog with i18n and light/dark color modes support.
 It was designed for https://julie-pr.blog website, but if you like it - feel free to clone and modify.
 
+The color scheme button cycles through System (◐), Dark (☾), and Light (☼).
+Without a valid `juliepr-theme-deneb-palette` localStorage value, the theme follows the browser's
+`prefers-color-scheme` setting and updates when the system preference changes.
+Explicit light/dark choices are saved in localStorage; choosing System removes
+the saved value. Existing localStorage preferences remain supported. If storage
+is blocked, the button still works for the current page.
+
 The theme outputs canonical links for the posts index (including a homepage
 showing latest posts or a separate posts page), category, tag, taxonomy, post type,
 author, and year/month/day archives, preserving pagination and omitting extra request parameters.
